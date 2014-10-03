@@ -1,13 +1,20 @@
 
 .km-mycustomicon:after,
-.km-mycustomicon:before
-{
-  content: "\e056";
-}
-.km-mycustomicon{
-  font-size:18px !important;
+.km-mycustomicon:before {
+    content: "\e056";
 }
 
+.km-mycustomicon {
+    font-size: 18px !important;
+}
+
+.eachView {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: Arial;
+    font-size: 12pt;
+    line-height: .5;
+}
 
 
 
@@ -16,9 +23,9 @@
 /* controls some of the tabstrip settings*/
 
 
- .km-ios7 .k-list, .km-ios7 .k-slider, .km-ios7 .km-widget {
-            color: white;
-        }
+.km-ios7 .k-list, .km-ios7 .k-slider, .km-ios7 .km-widget {
+    color: white;
+}
 
 /* ------ */
 
@@ -26,23 +33,23 @@
 /* controls the drawer icon at the top of the page */
 .km-drawer-button:before, .km-drawer-button:after {
     content: "\e0eb";
-    color: black;
-    zoom: 1.5;
+    color: rgb(41, 57, 85);
+    /* zoom: 1.5; */
+    font-size: 24px;
     /* for ios, the icon needs to scoot up by 8px - may need to do something different for android */
-    margin-top: -7px;
+    margin-top: -10px;
 }
 
 /* controls the header navbar */
 .km-ios7 .km-view .km-navbar {
     font-family: Arial;
-    font-size: 11px;
+    font-size: 16px;
     font-weight: normal;
     font-style: normal;
     line-height: normal;
     text-shadow: none;
     background-color: rgb(255, 255, 255);
-    height: 38px;
-    padding-top: 2px;
+    height: 45px;
 }
 /* controls background of the overall page */
 .km-ios7 .km-view .km-content {
@@ -54,7 +61,7 @@
     text-shadow: none;
     background-color: rgb(246, 245, 244);
     /* by adding this border, we are actually just putting a pad between the edge of the screen and any content*/
-    border-left: 10px solid rgb(246, 245, 244);
+    /* border-left: 10px solid rgb(246, 245, 244);*/
 }
 
 .km-content p, .km-content h1, .km-content h2, .km-content h3, .km-content h4, .km-content h5, .km-content h6 {
@@ -63,7 +70,7 @@
 }
 
 .km-ios7 .km-view .km-tabstrip {
-    font-family: 'Arial Rounded MT';
+    font-family: Arial;
     font-size: 11pt;
     font-weight: normal;
     font-style: normal;
@@ -84,15 +91,16 @@
     background-color: rgb(41, 57, 85);
     font-family: Arial;
     font-size: 11pt;
-    color: #b7b2ac;
+    color: white;
 }
 
 /* This is copied from kendo.mobile.all.min.css (hopefully will override it with the change in margin*/
 /* controls list items - moved the margin to the left 10px against the wall of the screen*/
 .km-ios7 .km-list > li {
     font-size: 1.1em;
-    padding-left: 15px;;
-    margin-left: -10px;
+    padding-left: 15px;
+    ;
+    /* margin-left: -10px; */
     background: transparent;
     border-radius: 0;
     border-width: 1px 0 0;
@@ -125,8 +133,8 @@
 }
 
     .km-ios7 .km-view .km-tabstrip .km-button .km-icon {
-        color: rgb(240, 240, 240);
-        font-size:18px !important;
+        color: white;
+        font-size: 18px !important;
         padding-left: 7px;
         padding-bottom: 0px;
         padding-top: 5px;
