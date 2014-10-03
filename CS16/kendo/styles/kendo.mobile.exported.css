@@ -1,4 +1,27 @@
 
+.km-mycustomicon:after,
+.km-mycustomicon:before
+{
+  content: "\e056";
+}
+.km-mycustomicon{
+  font-size:18px !important;
+}
+
+
+
+
+/* These were brought over from kendo.mobile.all.min.css to (hopefully) override the preset for the tabstrip (bottom of the page)*/
+/* ------ */
+/* controls some of the tabstrip settings*/
+
+
+ .km-ios7 .k-list, .km-ios7 .k-slider, .km-ios7 .km-widget {
+            color: white;
+        }
+
+/* ------ */
+
 /* This was brought over from main.css (and the link to main was removed) */
 /* controls the drawer icon at the top of the page */
 .km-drawer-button:before, .km-drawer-button:after {
@@ -31,12 +54,17 @@
     text-shadow: none;
     background-color: rgb(246, 245, 244);
     /* by adding this border, we are actually just putting a pad between the edge of the screen and any content*/
-    border-left: 10px solid  rgb(246, 245, 244);
+    border-left: 10px solid rgb(246, 245, 244);
+}
+
+.km-content p, .km-content h1, .km-content h2, .km-content h3, .km-content h4, .km-content h5, .km-content h6 {
+    margin-left: 0rem;
+    margin-right: 0rem;
 }
 
 .km-ios7 .km-view .km-tabstrip {
-    font-family: Roboto, HelveticaNeue, sans-serif;
-    font-size: 9px;
+    font-family: 'Arial Rounded MT';
+    font-size: 11pt;
     font-weight: normal;
     font-style: normal;
     line-height: normal;
@@ -51,12 +79,29 @@
     color: rgb(255, 255, 0);
 }
 
+/* list making up the drawer (or maybe every list)*/
 .km-ios7 .km-view .km-content .km-list > li {
-    background-color: rgb(197, 0, 124);
+    background-color: rgb(41, 57, 85);
+    font-family: Arial;
+    font-size: 11pt;
+    color: #b7b2ac;
+}
+
+/* This is copied from kendo.mobile.all.min.css (hopefully will override it with the change in margin*/
+/* controls list items - moved the margin to the left 10px against the wall of the screen*/
+.km-ios7 .km-list > li {
+    font-size: 1.1em;
+    padding-left: 15px;;
+    margin-left: -10px;
+    background: transparent;
+    border-radius: 0;
+    border-width: 1px 0 0;
+    border-style: solid;
 }
 
 .km-ios7 .km-view .km-content .km-list .km-state-active .km-listview-link {
-    background-color: rgb(140, 199, 0);
+    background-color: rgb(41, 57, 85);
+    color: #d5860d;
 }
 
 .km-ios7 .km-view .km-navbar .km-button.km-state-active .km-text {
@@ -64,11 +109,11 @@
 }
 
 .km-ios7 .km-view .km-tabstrip .km-button.km-state-active {
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 73, 138);
 }
 
 .km-ios7 .km-view .km-tabstrip .km-state-active span.km-icon {
-    color: rgb(229, 229, 229);
+    color: pink;
 }
 
 .km-ios7 .km-view .km-tabstrip .km-button.km-state-active .km-text {
@@ -76,11 +121,14 @@
 }
 
 .km-ios7 .km-view .km-tabstrip .km-button {
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(41, 57, 85);
 }
 
     .km-ios7 .km-view .km-tabstrip .km-button .km-icon {
-        color: rgb(255, 255, 0);
+        color: rgb(240, 240, 240);
+        font-size:18px !important;
+        padding-left: 7px;
+        padding-bottom: 0px;
     }
 
     .km-ios7 .km-view .km-tabstrip .km-button .km-text {
@@ -88,7 +136,8 @@
     }
 
 .km-ios7 .km-view .km-content .km-scrollview {
-    background-color: rgb(140, 199, 0);
+    background-color: rgb(41, 57, 85);
+    color: #d5860d;
 }
 
 .km-ios7 .km-view .km-content .km-listgroup .km-group-title {
@@ -141,7 +190,8 @@
 }
 
 .km-android .km-view .km-content .km-list .km-state-active .km-listview-link {
-    background-color: rgb(140, 199, 0);
+    background-color: rgb(48, 58, 66);
+    color: orange;
 }
 
 .km-android .km-view .km-navbar .km-button.km-state-active .km-text {
@@ -173,7 +223,8 @@
     }
 
 .km-android .km-view .km-content .km-scrollview {
-    background-color: rgb(140, 199, 0);
+    background-color: rgb(48, 58, 66);
+    color: #d5860d;
 }
 
 .km-android .km-view .km-content .km-listgroup .km-group-title {
@@ -226,7 +277,8 @@
 }
 
 .km-blackberry .km-view .km-content .km-list .km-state-active .km-listview-link {
-    background-color: rgb(140, 199, 0);
+    background-color: rgb(48, 58, 66);
+    color: #d5860d;
 }
 
 .km-blackberry .km-view .km-navbar .km-button.km-state-active .km-text {
@@ -258,7 +310,8 @@
     }
 
 .km-blackberry .km-view .km-content .km-scrollview {
-    background-color: rgb(140, 199, 0);
+    background-color: rgb(48, 58, 66);
+    color: #d5860d;
 }
 
 .km-blackberry .km-view .km-content .km-listgroup .km-group-title {
@@ -311,7 +364,8 @@
 }
 
 .km-wp .km-view .km-content .km-list .km-state-active .km-listview-link {
-    background-color: rgb(140, 199, 0);
+    background-color: rgb(48, 58, 66);
+    color: #d5860d;
 }
 
 .km-wp .km-view .km-navbar .km-button.km-state-active .km-text {
@@ -343,7 +397,8 @@
     }
 
 .km-wp .km-view .km-content .km-scrollview {
-    background-color: rgb(140, 199, 0);
+    background-color: rgb(48, 58, 66);
+    color: #d5860d;
 }
 
 .km-wp .km-view .km-content .km-listgroup .km-group-title {
@@ -396,7 +451,8 @@
 }
 
 .km-flat .km-view .km-content .km-list .km-state-active .km-listview-link {
-    background-color: rgb(140, 199, 0);
+    background-color: rgb(48, 58, 66);
+    color: orange;
 }
 
 .km-flat .km-view .km-navbar .km-button.km-state-active .km-text {
@@ -428,7 +484,8 @@
     }
 
 .km-flat .km-view .km-content .km-scrollview {
-    background-color: rgb(140, 199, 0);
+    background-color: rgb(48, 58, 66);
+    color: orange;
 }
 
 .km-flat .km-view .km-content .km-listgroup .km-group-title {

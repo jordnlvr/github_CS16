@@ -14,65 +14,62 @@
 
 </head>
 <body>
- 
-  <div data-role="layout" data-id="main">
-    <div data-role="header">
-      <div data-role="navbar">
-        <span data-role="view-title"></span>
-        <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
-      </div>
+
+    <div data-role="layout" data-id="main">
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+            </div>
+        </div>
+
+        <!-- application views will be rendered here -->
+
+        <div data-role="footer" style="height: 32px;">
+            <div data-role="tabstrip">
+                <a href="views/home.html" data-icon="contacts">
+                    Profile
+                </a><a href="views/settings.html" data-icon="history">
+                    Sales
+                </a><a href="views/settings.html" data-icon="favorites">
+                    Rating
+                </a><a href="views/settings.html" data-icon="settings">Settings</a><a href="views/settings.html" data-icon="favorites">
+                    Rating
+                </a><a href="views/settings.html" data-icon="settings">Settings</a>
+            </div>
+        </div>
+
     </div>
 
-    <!-- application views will be rendered here -->
-      <div data-role="footer">
-          <div id="apptabstrip"
-               data-role="tabstrip"
-               data-select="footerSelectEvent">
-              <a href="views/home.html"
-                 data-icon="contacts">
-                  Home
-              </a>
-              <a href="views/settings.html"
-                 data-icon="favorites">
-                  Settings
-              </a>
-              <a href="views/contacts.html"
-                 data-icon="about">
-                  Contacts
-              </a>
-          </div>
-      </div>
-
-  </div>
 
 
-
-  <!-- application drawer and contents -->
-  <div data-role="drawer" id="appDrawer" style="width: 270px" data-title="Navigation">
-    <div data-role="header">
-      <div data-role="navbar">
-        <span data-role="view-title"></span>
-      </div>
+    <!-- application drawer and contents -->
+    <div data-role="drawer" id="appDrawer" style="width: 270px;" data-title="">
+        <div data-role="header">
+            <div data-role="navbar" style="background-color: #293955;">
+                <span data-role="view-title" style="color: #e8e8ec;"></span>
+            </div>
+        </div>
+        <ul data-role="listview">
+            <li>
+                <a href="views/home.html" data-icon="home">Green Home</a>
+            </li>
+            <li>
+                <a href="views/settings.html" data-icon="settings">Settings</a>
+            </li>
+            <li>
+                <a href="views/contacts.html" data-icon="contacts">Contacts</a>
+            </li>
+        </ul>
     </div>
-    <ul data-role="listview">
-      <li>
-        <a href="views/home.html">Green Home</a>
-      </li>
-      <li>
-        <a href="views/settings.html">Settings</a>
-      </li>
-      <li>
-        <a href="views/contacts.html">Contacts</a>
-      </li>
-    </ul>
-  </div>       
+
 
 
     <script>
-    function footerSelectEvent() {
-        console.log('Select Event');
-    }
+        function footerSelectEvent() {
+            console.log('Select Event');
+        }
     </script>
-    
+
 </body>
 </html>
