@@ -6,7 +6,7 @@
   "DisplayName": "Cession Stand",
   "Author": "Kelly Seale",
   "Description": "Concession Stand App",
-  "BundleVersion": "1.06",
+  "BundleVersion": "1.08",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1",
