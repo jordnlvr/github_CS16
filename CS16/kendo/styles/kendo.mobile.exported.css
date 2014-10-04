@@ -8,6 +8,16 @@
     font-size: 18px !important;
 }
 
+.km-scheduleicon:after,
+.km-scheduleicon:before {
+    content: "\e089";
+}
+
+.km-boxicon:after,
+.km-boxicon:before {
+    content: "\e088";
+}
+
 .eachView {
     padding-left: 8px;
     padding-right: 8px;

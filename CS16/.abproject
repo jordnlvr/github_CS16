@@ -3,10 +3,10 @@
   "ProjectGuid": "bf1da604-ea2b-490d-9c7f-bf59c433034a",
   "projectVersion": 1,
   "AppIdentifier": "com.seale.CS16",
-  "DisplayName": "CS16",
+  "DisplayName": "Cession Stand",
   "Author": "Kelly Seale",
   "Description": "Concession Stand App",
-  "BundleVersion": "1.01",
+  "BundleVersion": "1.06",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1",

@@ -26,6 +26,8 @@
     <Content Include="cordova.ios.js" />
     <Content Include="cordova.wp8.js" />
     <Content Include="index.html" />
+    <Content Include="kendo\styles\images\Splashwater_1040x1536.jpg" />
+    <Content Include="views\viewer.html" />
     <Resource Include="App_Resources\Android\drawable-hdpi\icon.png" />
     <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
     <Resource Include="App_Resources\Android\drawable-mdpi\icon.png" />
@@ -55,8 +57,11 @@
     <Resource Include="App_Resources\WP8\SplashScreenImage.jpg" />
     <Resource Include="App_Resources\WP8\Tiles\Iconic\110x110.png" />
     <Resource Include="App_Resources\WP8\Tiles\Iconic\202x202.png" />
+    <Content Include="kendo\js\jquery-1.7.2.min.js" />
+    <Content Include="kendo\js\jquery.blackcalculator-1.0.1.min.js" />
     <Content Include="kendo\js\jquery.min.js" />
     <Content Include="kendo\js\kendo.mobile.min.js" />
+    <Content Include="kendo\styles\images\bizzabo3.png" />
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
     <Content Include="kendo\styles\images\back.png" />
     <Content Include="kendo\styles\images\kendoui.svg" />
@@ -69,8 +74,14 @@
     <Content Include="kendo\typescript\kendo.mobile.d.ts" />
     <Content Include="scripts\app.js" />
     <Content Include="styles\main.css" />
+    <Content Include="views\calculator.html" />
     <Content Include="views\contacts.html" />
     <Content Include="views\home.html" />
+    <Content Include="views\money.html" />
+    <Content Include="views\inventory.html" />
+    <Content Include="views\menus.html" />
+    <Content Include="views\schedules.html" />
+    <Content Include="views\moneydrawer.html" />
     <Content Include="views\settings.html" />
   </ItemGroup>
   <ItemGroup>
