@@ -6,7 +6,7 @@
             <div class="whiteMoneyDrawerOuterBox">
                 <div class="plan planContainer text">
                     <div class="button"><a class="bestPlanButton" href="#popMoney" data-rel="popover" data-role="button" data-click="onOpen" id="pennies"><div class="justWhiteText">Pennies</div></a></div><br />
-                    <div class="moneyDrawerLabelBold">Count: </div><div class="moneyDrawerLabel"><label id="lblpenniesscount">0</label></div><br /><br />
+                    <div class="moneyDrawerLabelBold">Count: </div><div class="moneyDrawerLabel"><label id="lblpenniescount">0</label></div><br /><br />
                     <div class="moneyDrawerLabelBold">Total: </div><div class="moneyDrawerLabel"><label id="lblpenniestotal">$0.00</label></div>
                 </div>
             </div>
@@ -52,22 +52,22 @@
             <div class="whiteMoneyDrawerOuterBox">
                 <div class="plan planContainer text">
                     <div class="button"><a class="bestPlanButton" href="#popMoney" data-rel="popover" data-role="button" data-click="onOpen" id="tens"><div class="justWhiteText">Tens</div></a></div><br />
-                    <div class="moneyDrawerLabelBold">Count: </div><div class="moneyDrawerLabel"><label id="lblquarterscount">0</label></div><br /><br />
-                    <div class="moneyDrawerLabelBold">Total: </div><div class="moneyDrawerLabel"><label id="lblquarterstotal">$0.00</label></div>
+                    <div class="moneyDrawerLabelBold">Count: </div><div class="moneyDrawerLabel"><label id="lbltenscount">0</label></div><br /><br />
+                    <div class="moneyDrawerLabelBold">Total: </div><div class="moneyDrawerLabel"><label id="lbltenstotal">$0.00</label></div>
                 </div>
             </div>
             <div class="whiteMoneyDrawerOuterBox">
                 <div class="plan planContainer text">
-                    <div class="button"><a class="bestPlanButton" href="#popMoney" data-rel="popover" data-role="button" data-click="onOpen" id="twenites"><div class="justWhiteText">Twenties</div></a></div><br />
-                    <div class="moneyDrawerLabelBold">Count: </div><div class="moneyDrawerLabel"><label id="lbldollarscount">0</label></div><br /><br />
-                    <div class="moneyDrawerLabelBold">Total: </div><div class="moneyDrawerLabel"><label id="lbldollarstotal">$0.00</label></div>
+                    <div class="button"><a class="bestPlanButton" href="#popMoney" data-rel="popover" data-role="button" data-click="onOpen" id="twenties"><div class="justWhiteText">Twenties</div></a></div><br />
+                    <div class="moneyDrawerLabelBold">Count: </div><div class="moneyDrawerLabel"><label id="lbltwentiescount">0</label></div><br /><br />
+                    <div class="moneyDrawerLabelBold">Total: </div><div class="moneyDrawerLabel"><label id="lbltwentiestotal">$0.00</label></div>
                 </div>
             </div>
             <div class="whiteMoneyDrawerOuterBox">
                 <div class="plan planContainer text">
                     <div class="button"><a class="bestPlanButton" href="#popMoney" data-rel="popover" data-role="button" data-click="onOpen" id="fifties"><div class="justWhiteText">Fifties</div></a></div><br />
-                    <div class="moneyDrawerLabelBold">Count: </div><div class="moneyDrawerLabel"><label id="lblfivescount">0</label></div><br /><br />
-                    <div class="moneyDrawerLabelBold">Total: </div><div class="moneyDrawerLabel"><label id="lblfivestotal">$0.00</label></div>
+                    <div class="moneyDrawerLabelBold">Count: </div><div class="moneyDrawerLabel"><label id="lblfiftiescount">0</label></div><br /><br />
+                    <div class="moneyDrawerLabelBold">Total: </div><div class="moneyDrawerLabel"><label id="lblfiftiestotal">$0.00</label></div>
                 </div>
             </div>
 
@@ -80,7 +80,7 @@
             </div>
             <div class="whiteMoneyDrawerOuterBox" style="width: 66%; font-family: Arial;">
                 <div class="plan planContainer text">
-                    Total: <input placeholder="Total" style="width: 85px; text-align: right; font-size: 20px; color: black; margin-right: 25px; padding: 0px;" id="wind" />
+                    Total: <input placeholder="Total" style="width: 125px; text-align: right; font-size: 20px; color: black; margin-right: 25px; padding: 0px;" id="wind" />
                 </div>
             </div>
 
@@ -94,25 +94,25 @@
 
                 <div class="plan">
                     <div class="planContainer" style="border-radius: 20px;">
-                        
-                            <div class="title"><h2 class="bestPlanTitle">Adding Total Count of</h2></div>
-                            <div class="price"><p class="bestPlanPrice"><label id="whichSelected"></label></p></div>
+
+                        <div class="title"><h2 class="bestPlanTitle">Adding Total Count of</h2></div>
+                        <div class="price"><p class="bestPlanPrice"><label id="whichSelected"></label></p></div>
+                        <div class="rand">
+                            <div style="float: left; width: 38px; text-align: center; padding-top: 14px;"><img src="./kendo/styles/images/calcgray.png"></div>
                             <div class="rand">
-                                <div style="float: left; width: 38px; text-align: center; padding-top: 14px;"><img src="./kendo/styles/images/calcgray.png"></div>
-                                <div class="rand">
-                                    <input id="inputCount" type="tel" min="0" style="width: 80px; font-size: medium; height: 32px;" autofocus>
-                                    <div style="float: right;">
-                                        <div class="button">
-                                            <a class="bestPlanButton" data-role="button" data-click="closeParentPopover" id="closer" style="width: 45px; padding-bottom: 7px;">
-                                                <div class="justWhiteText" style="margin: -27px;">Add</div>
-                                            </a>
-                                        </div>
+                                <input id="inputCount" type="tel" min="0" style="width: 80px; font-size: medium; height: 32px;" autofocus>
+                                <div style="float: right;">
+                                    <div class="button">
+                                        <a class="bestPlanButton" data-role="button" data-click="closeParentPopover" id="closer" style="width: 45px; padding-bottom: 7px;">
+                                            <div class="justWhiteText" style="margin: -27px;">Add</div>
+                                        </a>
                                     </div>
                                 </div>
-
                             </div>
 
-                        
+                        </div>
+
+
                     </div>
                 </div>
 
@@ -127,170 +127,7 @@
 
 
 <style>
-    .gol {
-        background-color: white !important;
-        border: 1px solid #8e9bbc !important;
-        -webkit-border-radius: 8px !important;
-        -moz-border-radius: 8px !important;
-        border-radius: 8px !important;
-    }
-
-    .thiscss {
-        font-weight: normal;
-        color: #000000;
-        font-size: 11px;
-        text-align: left;
-        font-family: sans-serif;
-        margin-left: 15px;
-        width: auto;
-    }
-
-    .button1 {
-        width: 58px;
-        vertical-align: middle;
-    }
-
-    table, td, th {
-        border: 0px solid black;
-        table-layout: auto;
-        border-spacing: 0px;
-        empty-cells: show;
-        text-align: left;
-        font-size: 12px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    a.btnX {
-        display: inline-block;
-        color: #666;
-        background-color: #eee;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 12px;
-        height: 36px;
-        padding: 10px 30px;
-        border-radius: 5px;
-        display: inline-block;
-        color: #666;
-        background-color: #eee;
-        letter-spacing: 2px;
-        font-size: 18px;
-        padding: 10px 30px;
-        border-radius: 5px;
-        -moz-border-radius: 15px;
-        -webkit-border-radius: 15px;
-        border: 1px solid rgba(0,0,0,0.3);
-        border-bottom-width: 3px;
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
-        border: 1px solid rgba(0,0,0,0.3);
-        border-bottom-width: 3px;
-        vertical-align: text-bottom;
-    }
-
-        a.btnX:hover {
-            background-color: #e3e3e3;
-            border-color: rgba(0,0,0,0.5);
-        }
-
-        a.btnX:active {
-            background-color: #CCC;
-            border-color: rgba(0,0,0,0.9);
-        }
-
-        /* red button */
-
-        a.btnX.btn-orange {
-            background-color: #c5851f;
-            border-color: rgba(0,0,0,0.3);
-            text-shadow: 0 1px 0 rgba(0,0,0,0.5);
-            color: #FFF;
-        }
-
-            a.btnX.btn-orange:hover {
-                background-color: #f8981d;
-                border-color: rgba(0,0,0,0.5);
-            }
-
-            a.btnX.btn-orange:active {
-                background-color: #f8981d;
-                border-color: rgba(0,0,0,0.9);
-            }
-
-    #popheader {
-        background-color: #d5860d;
-        color: white;
-        text-align: center;
-        padding: 5px 5px 5px 5px;
-        font-size: 15px;
-        font-weight: bold;
-        height: 37px;
-        vertical-align: middle;
-    }
-
-    #popnav {
-        background-color: #fff;
-        vertical-align: middle;
-        width: 35px;
-        float: left;
-        padding: 5px;
-    }
-
-    #popsection {
-        width: 175px;
-        float: left;
-        padding: 0px;
-        vertical-align: middle;
-    }
-
-    #popfooter {
-        background-color: #ffffff;
-        color: white;
-        clear: both;
-        text-align: center;
-        padding: 5px;
-    }
-
-    .outer {
-        font-size: 0;
-        width: 100%;
-        ;
-        height: 40px;
-        background: transparent;
-        text-align: center;
-        display: inline-block;
-    }
-
-        .outer .emptyDiv {
-            height: 100%;
-            background: orange;
-            visibility: collapse;
-        }
-
-        .outer .inner {
-            width: 100%;
-            padding: 5px;
-            background: #464236;
-            font: bold 12px Arial;
-        }
-
-    .verticalCenter {
-        display: inline-block;
-        *display: inline;
-        zoom: 1;
-        vertical-align: middle;
-        text-align: right;
-        color: white;
-    }
-
-    .verticalCenter2 {
-        display: inline-block;
-        *display: inline;
-        zoom: 1;
-        vertical-align: middle;
-        text-align: left;
-        color: black;
-    }
+    
 </style>
 <script>
 
@@ -326,9 +163,18 @@
         //get the button that goes with the selected money type
         var but = $('#' + x.text() + '').data("kendoMobileButton");
         //Check to see what count the user inserted for this particular money type
+        //make variable name of the label that goes with the money type we are changing
+        var xname = 'lbl' + x.text() + 'count';
+        //create variable of the label itself
+        var lookupLabel = $('#' + xname);
+        //Check to see what count the user inserted for this particular money type
         var count = $('#inputCount').val();
+        //alert(x.text());
         //set badge count for the right button
-        but.badge(count);
+        //but.badge(count);
+        //set the value and the text of the appropriate variable based what was inserted by the user
+        $(lookupLabel).val(count);
+        $(lookupLabel).text(count);
         
         //Call the Add function total and format the full count
         addEmUp();
@@ -339,17 +185,39 @@
     function addEmUp() {
         var total = 0;
         var p1s = 0;
-        var butP1s = $('#pennies').data("kendoMobileButton");
-        p1s = parseFloat(butP1s.badge()) * .01;
-        //$('#lblpenniesamount').text(CurrencyFormatted(parseFloat(p1s).toFixed(2)));
+        //var butP1s = $('#pennies').data("kendoMobileButton");
+        p1s = parseFloat($('#lblpenniescount').text()) * .01;
+        $('#lblpenniestotal').text(CurrencyFormatted(parseFloat(p1s).toFixed(2)));
         var n5s = 0;
-        butn5s = $('#nickels').data("kendoMobileButton");
-        n5s = parseFloat(butn5s.badge()) * .05;
-        alert('pen: ' + p1s + ', nick: ' + n5s);
-        //$('#lblnickelsamount').text(CurrencyFormatted(parseFloat(n5s).toFixed(2)));
+        n5s = parseFloat($('#lblnickelscount').text()) * .05;
+        $('#lblnickelstotal').text(CurrencyFormatted(parseFloat(n5s).toFixed(2)));
+        var d10s = 0;
+        d10s = parseFloat($('#lbldimescount').text()) * .10;
+        $('#lbldimestotal').text(CurrencyFormatted(parseFloat(d10s).toFixed(2)));
+        var q25s = 0;
+        q25s = parseFloat($('#lblquarterscount').text()) * .25;
+        $('#lblquarterstotal').text(CurrencyFormatted(parseFloat(q25s).toFixed(2)));
+        var o1s = 0;
+        o1s = parseFloat($('#lblonescount').text()) * 1.00;
+        $('#lblonestotal').text(CurrencyFormatted(parseFloat(o1s).toFixed(2)));
+        var f5s = 0;
+        f5s = parseFloat($('#lblfivescount').text()) * 5.00;
+        $('#lblfivestotal').text(CurrencyFormatted(parseFloat(f5s).toFixed(2)));
+        var t10s = 0;
+        t10s = parseFloat($('#lbltenscount').text()) * 10.00;
+        $('#lbltenstotal').text(CurrencyFormatted(parseFloat(t10s).toFixed(2)));
+        var t20s = 0;
+        t20s = parseFloat($('#lbltwentiescount').text()) * 20.00;
+        $('#lbltwentiestotal').text(CurrencyFormatted(parseFloat(t20s).toFixed(2)));
+        var f50s = 0;
+        f50s = parseFloat($('#lblfiftiescount').text()) * 50.00;
+        $('#lblfiftiestotal').text(CurrencyFormatted(parseFloat(f50s).toFixed(2)));
+        var h100s = 0;
+        h100s = parseFloat($('#lblhundredscount').text()) * 100.00;
+        $('#lblhundredstotal').text(CurrencyFormatted(parseFloat(h100s).toFixed(2)));
 
 
-        total = p1s + n5s;
+        total = p1s + n5s + d10s + q25s + o1s + f5s + t10s + t20s + f50s + h100s;
         var totaltext = CurrencyFormatted(parseFloat(total).toFixed(2));
         //alert(totaltext);
         $('#wind').val(totaltext);
@@ -365,7 +233,9 @@
         i = i / 100;
         s = new String(i);
         if (s.indexOf('.') < 0) { s += '.00'; }
-        if (s.indexOf('.') == (s.length - 2)) { s += '0'; }
+        if (s.indexOf('.') === (s.length - 2)) {
+            s += '0';
+        }
         s = minus + s;
         return ' $' + s + ' ';
     }
