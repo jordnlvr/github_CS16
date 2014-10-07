@@ -1,4 +1,46 @@
 
+
+.km-root .km-pane .km-view .km-icon {
+        background-size: 100% 100%;
+        -webkit-background-clip: border-box;
+    }
+
+    .km-customOneCent {
+        -webkit-mask-box-image: url("images/1cent.png");
+        background-color: white;
+    }
+
+
+.btnBlue {
+  background: #c7dff5 !important;
+  background-image: -webkit-linear-gradient(top, #c7dff5, #293955) !important;
+  background-image: -moz-linear-gradient(top, #c7dff5, #293955) !important;
+  background-image: -ms-linear-gradient(top, #c7dff5, #293955) !important;
+  background-image: -o-linear-gradient(top, #c7dff5, #293955) !important;
+  background-image: linear-gradient(to bottom, #c7dff5, #293955) !important;
+  -webkit-border-radius: 6 !important;
+  -moz-border-radius: 6 !important;
+  border-radius: 6px !important;
+  font-family: Arial !important;
+  color: white !important;
+  font-size: 18px !important;
+  padding: 15px 12px 10px 12px !important;
+  text-decoration: none !important;
+  height: 43px;
+  width: 105px;
+}
+
+.btnBlue:hover {
+  background: #8e9bbc;
+  background-image: -webkit-linear-gradient(top, #ededee, #00498a);
+  background-image: -moz-linear-gradient(top, #ededee, #00498a);
+  background-image: -ms-linear-gradient(top, #ededee, #00498a);
+  background-image: -o-linear-gradient(top, #ededee, #00498a);
+  background-image: linear-gradient(to bottom, #ededee, #00498a);
+  text-decoration: none;
+  color: #8e9bbc !important;
+}
+
 .km-mycustomicon:after,
 .km-mycustomicon:before {
     content: "\e056";
