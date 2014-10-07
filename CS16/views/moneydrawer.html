@@ -1,4 +1,4 @@
-<div data-role="view" data-title="Drawer" data-layout="main" data-model="APP.models.settings">
+<div id="pageViewMoneyDrawer" data-role="view" data-title="Drawer" data-layout="main" data-model="APP.models.settings" data-show="showView">
     <div class="eachView">
         <br />
         <div class="features" id="features" style="min-height: 440px;">
@@ -85,19 +85,19 @@
                         <span style="margin: auto;">Total: <input placeholder="Total" style="width: 125px; text-align: right; font-size: 20px; color: black; margin-right: 5px; padding: 0px;" id="wind" /></span>
                     </div>
                 </div>
-                    <div class="plan planContainer text" style="padding: 0px 0px 1px !important;">
-                        <div class="button" style="width: 65%; float: right; padding-right: 7px;"><a class="bestPlanButton" data-rel="popover" data-role="button" data-click="checkReset" id="hundreds"><div class="justWhiteText">Clear/Reset</div></a></div>
-                    </div>
+                <div class="plan planContainer text" style="padding: 0px 0px 1px !important;">
+                    <div class="button" style="width: 65%; float: right; padding-right: 7px;"><a class="bestPlanButton" data-rel="popover" data-role="button" data-click="checkReset" id="hundreds"><div class="justWhiteText">Clear/Reset</div></a></div>
+                </div>
             </div>
-            
-                        
-                
+
+
+
 
         </div>
         <!-- Popover HTML -->
         <div data-show="showPopOver">
             <div id="popMoney" data-role="popover">
-                <div data-role="view">
+                <div id="viewPopover" data-role="view" data-show="focusInput">
 
                     <div class="plan">
                         <div class="planContainer" style="border-radius: 20px;">
@@ -135,10 +135,16 @@
 
 
     <style>
-        
+
     </style>
     <script>
 
+
+        function showView() {
+            //$("#hundreds").kendoMobileButton({ badge: 10 });
+            //adding this badge worked - so the function is being called corectly. There must be a 
+            //limitation on the number of things you can do this way...
+        }
 
         function showPopOver() {
             $("#popMoney").data("kendoMobilePopOver").open("#pennies");
@@ -214,7 +220,7 @@
             //set the value and the text of the appropriate variable based what was inserted by the user
             $(lookupLabel).val(count);
             $(lookupLabel).text(count);
-            
+
             //Call the Add function total and format the full count
             addEmUp(1);
             $("#popMoney").data("kendoMobilePopOver").close();
@@ -296,3 +302,4 @@
         }
 
     </script>
+</div>
