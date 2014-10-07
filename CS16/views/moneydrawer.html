@@ -78,179 +78,221 @@
                     <div class="moneyDrawerLabelBold">Total: </div><div class="moneyDrawerLabel"><label id="lblhundredstotal">$0.00</label></div>
                 </div>
             </div>
-            <div class="whiteMoneyDrawerOuterBox" style="width: 66%; font-family: Arial;">
-                <div class="plan planContainer text">
-                    Total: <input placeholder="Total" style="width: 125px; text-align: right; font-size: 20px; color: black; margin-right: 25px; padding: 0px;" id="wind" />
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div data-show="showPopOver">
-        <div id="popMoney" data-role="popover">
-            <div data-role="view">
-
-                <div class="plan">
-                    <div class="planContainer" style="border-radius: 20px;">
-
-                        <div class="title"><h2 class="bestPlanTitle">Adding Total Count of</h2></div>
-                        <div class="price"><p class="bestPlanPrice"><label id="whichSelected"></label></p></div>
-                        <div class="rand">
-                            <div style="float: left; width: 38px; text-align: center; padding-top: 14px;"><img src="./kendo/styles/images/calcgray.png"></div>
-                            <div class="rand">
-                                <input id="inputCount" type="tel" min="0" style="width: 80px; font-size: medium; height: 32px;" autofocus>
-                                <div style="float: right;">
-                                    <div class="button">
-                                        <a class="bestPlanButton" data-role="button" data-click="closeParentPopover" id="closer" style="width: 45px; padding-bottom: 7px;">
-                                            <div class="justWhiteText" style="margin: -27px;">Add</div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
+            <div class="whiteMoneyDrawerOuterBox" style="width: 66%; -webkit-box-shadow: 8px 8px 12px 1px rgba(26,23,26,0.36);
+-moz-box-shadow: 8px 8px 12px 1px rgba(26,23,26,0.36); box-shadow: 8px 8px 12px 1px rgba(26,23,26,0.36); background-color: #f6f5f4;">
+                <div style="padding-top: 6px;">
+                    <div class="plan planContainer text" style="font-weight: bold;">
+                        <span style="margin: auto;">Total: <input placeholder="Total" style="width: 125px; text-align: right; font-size: 20px; color: black; margin-right: 5px; padding: 0px;" id="wind" /></span>
                     </div>
                 </div>
+                    <div class="plan planContainer text" style="padding: 0px 0px 1px !important;">
+                        <div class="button" style="width: 65%; float: right; padding-right: 7px;"><a class="bestPlanButton" data-rel="popover" data-role="button" data-click="checkReset" id="hundreds"><div class="justWhiteText">Clear/Reset</div></a></div>
+                    </div>
+            </div>
+            
+                        
+                
+
+        </div>
+        <!-- Popover HTML -->
+        <div data-show="showPopOver">
+            <div id="popMoney" data-role="popover">
+                <div data-role="view">
+
+                    <div class="plan">
+                        <div class="planContainer" style="border-radius: 20px;">
+
+                            <div class="title"><h2 class="bestPlanTitle">Adding Total Count of</h2></div>
+                            <div class="price"><p class="bestPlanPrice"><label id="whichSelected"></label></p></div>
+                            <div class="rand">
+                                <div style="float: left; width: 38px; text-align: center; padding-top: 14px;"><img src="./kendo/styles/images/calcgray.png"></div>
+                                <div class="rand">
+                                    <input id="inputCount" type="tel" min="0" style="width: 80px; font-size: medium; height: 32px;" autofocus>
+                                    <div style="float: right;">
+                                        <div class="button">
+                                            <a class="bestPlanButton" data-role="button" data-click="closeParentPopover" id="closer" style="width: 45px; padding-bottom: 7px;">
+                                                <div class="justWhiteText" style="margin: -27px;">Add</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
 
 
 
+                </div>
             </div>
         </div>
+
+
     </div>
 
-</div>
 
 
-
-<style>
-    
-</style>
-<script>
-
-    function showPopOver() {
-        $("#popMoney").data("kendoMobilePopOver").open("#pennies");
-        $("#popMoney").data("kendoMobilePopOver").open("#nickels");
-        $("#popMoney").data("kendoMobilePopOver").open("#dimes");
-        $("#popMoney").data("kendoMobilePopOver").open("#quarters");
-        $("#popMoney").data("kendoMobilePopOver").open("#dollars");
-        $("#popMoney").data("kendoMobilePopOver").open("#fives");
-        $("#popMoney").data("kendoMobilePopOver").open("#tens");
-        $("#popMoney").data("kendoMobilePopOver").open("#twenties");
-        $("#popMoney").data("kendoMobilePopOver").open("#fifties");
-        $("#popMoney").data("kendoMobilePopOver").open("#hundreds");
-    }
-
-    function focusInput() {
-        $('#inputCount').focus();
-    }
-
-    function onOpen(e) {
-        console.log("open");
-        //get the id of the button that was clicked
-        var x = this.element.prop('id');
-        $('#whichSelected').val(x);
-        $('#whichSelected').text(x);
-        clearIt();
-    }
-
-    function closeParentPopover(e) {
-        //find the name for the money type we are changing (was set on open)
-        var x = $('#whichSelected');
-        //get the button that goes with the selected money type
-        var but = $('#' + x.text() + '').data("kendoMobileButton");
-        //Check to see what count the user inserted for this particular money type
-        //make variable name of the label that goes with the money type we are changing
-        var xname = 'lbl' + x.text() + 'count';
-        //create variable of the label itself
-        var lookupLabel = $('#' + xname);
-        //Check to see what count the user inserted for this particular money type
-        var count = $('#inputCount').val();
-        //alert(x.text());
-        //set badge count for the right button
-        //but.badge(count);
-        //set the value and the text of the appropriate variable based what was inserted by the user
-        $(lookupLabel).val(count);
-        $(lookupLabel).text(count);
+    <style>
         
-        //Call the Add function total and format the full count
-        addEmUp();
-        $("#popMoney").data("kendoMobilePopOver").close();
-        $('#whichSelected').focus();
-    }
-
-    function addEmUp() {
-        var total = 0;
-        var p1s = 0;
-        //var butP1s = $('#pennies').data("kendoMobileButton");
-        p1s = parseFloat($('#lblpenniescount').text()) * .01;
-        $('#lblpenniestotal').text(CurrencyFormatted(parseFloat(p1s).toFixed(2)));
-        var n5s = 0;
-        n5s = parseFloat($('#lblnickelscount').text()) * .05;
-        $('#lblnickelstotal').text(CurrencyFormatted(parseFloat(n5s).toFixed(2)));
-        var d10s = 0;
-        d10s = parseFloat($('#lbldimescount').text()) * .10;
-        $('#lbldimestotal').text(CurrencyFormatted(parseFloat(d10s).toFixed(2)));
-        var q25s = 0;
-        q25s = parseFloat($('#lblquarterscount').text()) * .25;
-        $('#lblquarterstotal').text(CurrencyFormatted(parseFloat(q25s).toFixed(2)));
-        var o1s = 0;
-        o1s = parseFloat($('#lblonescount').text()) * 1.00;
-        $('#lblonestotal').text(CurrencyFormatted(parseFloat(o1s).toFixed(2)));
-        var f5s = 0;
-        f5s = parseFloat($('#lblfivescount').text()) * 5.00;
-        $('#lblfivestotal').text(CurrencyFormatted(parseFloat(f5s).toFixed(2)));
-        var t10s = 0;
-        t10s = parseFloat($('#lbltenscount').text()) * 10.00;
-        $('#lbltenstotal').text(CurrencyFormatted(parseFloat(t10s).toFixed(2)));
-        var t20s = 0;
-        t20s = parseFloat($('#lbltwentiescount').text()) * 20.00;
-        $('#lbltwentiestotal').text(CurrencyFormatted(parseFloat(t20s).toFixed(2)));
-        var f50s = 0;
-        f50s = parseFloat($('#lblfiftiescount').text()) * 50.00;
-        $('#lblfiftiestotal').text(CurrencyFormatted(parseFloat(f50s).toFixed(2)));
-        var h100s = 0;
-        h100s = parseFloat($('#lblhundredscount').text()) * 100.00;
-        $('#lblhundredstotal').text(CurrencyFormatted(parseFloat(h100s).toFixed(2)));
+    </style>
+    <script>
 
 
-        total = p1s + n5s + d10s + q25s + o1s + f5s + t10s + t20s + f50s + h100s;
-        var totaltext = CurrencyFormatted(parseFloat(total).toFixed(2));
-        //alert(totaltext);
-        $('#wind').val(totaltext);
-    }
-
-    function CurrencyFormatted(amount) {
-        var i = parseFloat(amount);
-        if (isNaN(i)) { i = 0.00; }
-        var minus = '';
-        if (i < 0) { minus = '-'; }
-        i = Math.abs(i);
-        i = parseInt((i + .005) * 100);
-        i = i / 100;
-        s = new String(i);
-        if (s.indexOf('.') < 0) { s += '.00'; }
-        if (s.indexOf('.') === (s.length - 2)) {
-            s += '0';
+        function showPopOver() {
+            $("#popMoney").data("kendoMobilePopOver").open("#pennies");
+            $("#popMoney").data("kendoMobilePopOver").open("#nickels");
+            $("#popMoney").data("kendoMobilePopOver").open("#dimes");
+            $("#popMoney").data("kendoMobilePopOver").open("#quarters");
+            $("#popMoney").data("kendoMobilePopOver").open("#dollars");
+            $("#popMoney").data("kendoMobilePopOver").open("#fives");
+            $("#popMoney").data("kendoMobilePopOver").open("#tens");
+            $("#popMoney").data("kendoMobilePopOver").open("#twenties");
+            $("#popMoney").data("kendoMobilePopOver").open("#fifties");
+            $("#popMoney").data("kendoMobilePopOver").open("#hundreds");
         }
-        s = minus + s;
-        return ' $' + s + ' ';
-    }
 
-    function clearIt() {
-        $('#inputCount').val('');
-        $('#inputCount').text('');
-    }
+        function focusInput() {
+            $('#inputCount').focus();
+        }
 
-    function closeModal() {
-        //get
-        //var bla = $('#firstNum').val();
-        //set
-        //$('#wind').val(bla);
-        //$("#modalview-login").data("kendoMobileModalView").close();
-    }
+        function checkReset() {
+            if (confirm("Are you sure you want to clear everything?")) {
+                reset();
+            }
+        }
 
-</script>
+        function reset() {
+            $('#lblpenniescount').text('0');
+            $('#lblpenniestotal').text(CurrencyFormatted(parseFloat(0.00).toFixed(2)));
+            $('#lblnickelscount').text('0');
+            $('#lblnickelstotal').text(CurrencyFormatted(parseFloat(0.00).toFixed(2)));
+            $('#lbldimescount').text('0');
+            $('#lbldimestotal').text(CurrencyFormatted(parseFloat(0.00).toFixed(2)));
+            $('#lblquarterscount').text('0');
+            $('#lblquarterstotal').text(CurrencyFormatted(parseFloat(0.00).toFixed(2)));
+            $('#lblonescount').text('0');
+            $('#lblonestotal').text(CurrencyFormatted(parseFloat(0.00).toFixed(2)));
+            $('#lblfivescount').text('0');
+            $('#lblfivestotal').text(CurrencyFormatted(parseFloat(0.00).toFixed(2)));
+            $('#lbltenscount').text('0');
+            $('#lbltenstotal').text(CurrencyFormatted(parseFloat(0.00).toFixed(2)));
+            $('#lbltwentiescount').text('0');
+            $('#lbltwentiestotal').text(CurrencyFormatted(parseFloat(0.00).toFixed(2)));
+            $('#lblfiftiescount').text('0');
+            $('#lblfiftiestotal').text(CurrencyFormatted(parseFloat(0.00).toFixed(2)));
+            $('#lblhundredscount').text('0');
+            $('#lblhundredstotal').text(CurrencyFormatted(parseFloat(0.00).toFixed(2)));
+            addEmUp(0);
+        }
+
+        function onOpen(e) {
+            console.log("open");
+            //get the id of the button that was clicked
+            var x = this.element.prop('id');
+            $('#whichSelected').val(x);
+            $('#whichSelected').text(x);
+            clearIt();
+        }
+
+        function closeParentPopover(e) {
+            //find the name for the money type we are changing (was set on open)
+            var x = $('#whichSelected');
+            //get the button that goes with the selected money type
+            var but = $('#' + x.text() + '').data("kendoMobileButton");
+            //Check to see what count the user inserted for this particular money type
+            //make variable name of the label that goes with the money type we are changing
+            var xname = 'lbl' + x.text() + 'count';
+            //create variable of the label itself
+            var lookupLabel = $('#' + xname);
+            //Check to see what count the user inserted for this particular money type
+            var count = $('#inputCount').val();
+            //alert(x.text());
+            //set badge count for the right button
+            //but.badge(count);
+            //set the value and the text of the appropriate variable based what was inserted by the user
+            $(lookupLabel).val(count);
+            $(lookupLabel).text(count);
+            
+            //Call the Add function total and format the full count
+            addEmUp(1);
+            $("#popMoney").data("kendoMobilePopOver").close();
+            $('#whichSelected').focus();
+        }
+
+        function addEmUp(e) {
+            var total = 0;
+            var p1s = 0;
+            //var butP1s = $('#pennies').data("kendoMobileButton");
+            p1s = parseFloat($('#lblpenniescount').text()) * .01;
+            $('#lblpenniestotal').text(CurrencyFormatted(parseFloat(p1s).toFixed(2)));
+            var n5s = 0;
+            n5s = parseFloat($('#lblnickelscount').text()) * .05;
+            $('#lblnickelstotal').text(CurrencyFormatted(parseFloat(n5s).toFixed(2)));
+            var d10s = 0;
+            d10s = parseFloat($('#lbldimescount').text()) * .10;
+            $('#lbldimestotal').text(CurrencyFormatted(parseFloat(d10s).toFixed(2)));
+            var q25s = 0;
+            q25s = parseFloat($('#lblquarterscount').text()) * .25;
+            $('#lblquarterstotal').text(CurrencyFormatted(parseFloat(q25s).toFixed(2)));
+            var o1s = 0;
+            o1s = parseFloat($('#lblonescount').text()) * 1.00;
+            $('#lblonestotal').text(CurrencyFormatted(parseFloat(o1s).toFixed(2)));
+            var f5s = 0;
+            f5s = parseFloat($('#lblfivescount').text()) * 5.00;
+            $('#lblfivestotal').text(CurrencyFormatted(parseFloat(f5s).toFixed(2)));
+            var t10s = 0;
+            t10s = parseFloat($('#lbltenscount').text()) * 10.00;
+            $('#lbltenstotal').text(CurrencyFormatted(parseFloat(t10s).toFixed(2)));
+            var t20s = 0;
+            t20s = parseFloat($('#lbltwentiescount').text()) * 20.00;
+            $('#lbltwentiestotal').text(CurrencyFormatted(parseFloat(t20s).toFixed(2)));
+            var f50s = 0;
+            f50s = parseFloat($('#lblfiftiescount').text()) * 50.00;
+            $('#lblfiftiestotal').text(CurrencyFormatted(parseFloat(f50s).toFixed(2)));
+            var h100s = 0;
+            h100s = parseFloat($('#lblhundredscount').text()) * 100.00;
+            $('#lblhundredstotal').text(CurrencyFormatted(parseFloat(h100s).toFixed(2)));
+
+
+            total = p1s + n5s + d10s + q25s + o1s + f5s + t10s + t20s + f50s + h100s;
+            if (e === 0) {
+                total = 0;
+            }
+            var totaltext = CurrencyFormatted(parseFloat(total).toFixed(2));
+            //alert(totaltext);
+            $('#wind').val(totaltext);
+        }
+
+        function CurrencyFormatted(amount) {
+            var i = parseFloat(amount);
+            if (isNaN(i)) { i = 0.00; }
+            var minus = '';
+            if (i < 0) { minus = '-'; }
+            i = Math.abs(i);
+            i = parseInt((i + .005) * 100);
+            i = i / 100;
+            s = new String(i);
+            if (s.indexOf('.') < 0) { s += '.00'; }
+            if (s.indexOf('.') === (s.length - 2)) {
+                s += '0';
+            }
+            s = minus + s;
+            return ' $' + s + ' ';
+        }
+
+        function clearIt() {
+            $('#inputCount').val('');
+            $('#inputCount').text('');
+        }
+
+        function closeModal() {
+            //get
+            //var bla = $('#firstNum').val();
+            //set
+            //$('#wind').val(bla);
+            //$("#modalview-login").data("kendoMobileModalView").close();
+        }
+
+    </script>
