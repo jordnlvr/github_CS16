@@ -62,7 +62,6 @@
     <Resource Include="App_Resources\WP8\Tiles\Iconic\110x110.png" />
     <Resource Include="App_Resources\WP8\Tiles\Iconic\202x202.png" />
     <Content Include="kendo\js\jquery-1.7.2.min.js" />
-    <Content Include="kendo\js\jquery.blackcalculator-1.0.1.min.js" />
     <Content Include="kendo\js\jquery.min.js" />
     <Content Include="kendo\js\kendo.mobile.min.js" />
     <Content Include="kendo\styles\images\bizzabo3.png" />
